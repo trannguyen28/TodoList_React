@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { BsFillPlusCircleFill } from "react-icons/bs"
 
 const InputTodo = props => {
   const [inputText, setInputText] = useState({
@@ -34,7 +35,7 @@ const InputTodo = props => {
         name="title"
         onChange={onChange}
       />
-      <button className="input-submit">Submit</button>
+      <button className="input-submit"><BsFillPlusCircleFill/></button>
     </form>
   )
 }

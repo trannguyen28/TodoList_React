@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styles from "./TodoItem.module.scss"
+import { FaTrash } from "react-icons/fa"
 
 const TodoItem = props => {
   const [editing, setEditing] = useState(false)
@@ -41,7 +42,7 @@ const TodoItem = props => {
   return (
     <li className={styles.item}>
       <div onDoubleClick={handleEditing} style={viewMode}>
-        <button onClick={() => props.deleteTodoProps(id)}>Delete</button>
+        <button onClick={() => props.deleteTodoProps(id)}><FaTrash /></button>
         <input
           type="checkbox"
           className={styles.checkbox}
